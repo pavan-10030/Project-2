@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container_cards">
+            <div class="img_card">
+                <img class="image" src="image1.jpg" alt="">
+            </div>
+            <div class="img_card">
+                <img class="image" src="image2.jpg" alt="">
+            </div>
+            <div class="img_card">
+                <img class="image" src="image3.jpg" alt="">
+            </div>
+            <div class="img_card">
+                <img class="image" src="image4.jpg" alt="">
+            </div>
+            <div class="img_card">
+                <img class="image" src="image5.jpg" alt="">
+            </div>
+            <div class="img_card">
+                <img class="image" src="image6.jpg" alt="">
+            </div>
+            <div class="img_card">
+                <img class="image" src="image7.jpg" alt="">
+            </div>
+            <div class="img_card">
+                <img class="image" src="image8.jpg" alt="">
+            </div>
+        </div>
+        <div class="container_control">
+            <button class="btn prev">&#8678 Previous</button>
+            <button class="btn next">Next &#8680</button>
+        </div>
+    </div>
+
+
+    <script>
+        const next=document.querySelector(".next");
+        const prev=document.querySelector(".prev");
+        let contain=document.querySelector(".container_cards");
+        let angle=0;
+
+
+        next.addEventListener("click",()=>{
+            angle -= 45;
+            contain.style.transform=`translateZ(-25rem) rotateY(${angle}deg)`;
+        });
+        prev.addEventListener("click",()=>{
+            angle += 45;
+            contain.style.transform=`translateZ(-25rem) rotateY(${angle}deg)`;
+        });
+
+       
+    </script>
+</body>
+</html>
+
+
+
+
